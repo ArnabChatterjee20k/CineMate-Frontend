@@ -1,6 +1,7 @@
 import { AppShell, useMantineTheme, Box } from "@mantine/core";
 import { Nav } from "./layouts/Nav";
 import { BrowserRouter } from "react-router-dom";
+import SideNav from "./layouts/SideNav";
 function App() {
   const theme = useMantineTheme();
   return (
@@ -8,6 +9,7 @@ function App() {
       <AppShell
         styles={{ main: { padding: 0 } }}
         header={<Nav />}
+        navbar={<SideNav/>}
       >
         <Box
           sx={{

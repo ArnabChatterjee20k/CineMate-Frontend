@@ -1,22 +1,15 @@
-import {
-  createStyles,
-  Header,
-  Group,
-  Burger,
-  rem,
-} from "@mantine/core";
+import { createStyles, Header, Group, Burger, rem } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Logo from "../components/Logo";
 import Search from "../components/Nav/Search";
 import ActionLinks from "../components/Nav/ActionLinks";
-// import ActionLinks from "../components/Nav/ActionLinks";
 
 const useStyles = createStyles((theme) => ({
   header: {
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
     opacity: 0.7,
-    width:"100%"
+    width: "100%",
   },
 
   inner: {
@@ -25,36 +18,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
   },
-
-  links: {
-    [theme.fn.smallerThan("md")]: {
-      display: "none",
-    },
-  },
-
-  link: {
-    display: "block",
-    lineHeight: 1,
-    padding: `${rem(8)} ${rem(12)}`,
-    borderRadius: theme.radius.sm,
-    textDecoration: "none",
-    color:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
-
-    "&:hover": {
-      backgroundColor:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
-    },
-  },
 }));
-
-
 
 export function Nav() {
   const [opened, { toggle }] = useDisclosure(false);
@@ -70,7 +34,7 @@ export function Nav() {
 
         <Search />
 
-        <ActionLinks/>
+        <ActionLinks />
       </div>
     </Header>
   );

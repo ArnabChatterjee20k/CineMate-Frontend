@@ -1,10 +1,5 @@
-import { IconVideoPlus, IconBell, TablerIconsProps } from "@tabler/icons-react";
-import { FunctionComponent } from "react";
-
-interface LinksDataInterface {
-  link: string;
-  Icon: FunctionComponent<TablerIconsProps>;
-}
+import { IconVideoPlus, IconBell } from "@tabler/icons-react";
+import LinksDataInterface from "../interfaces/LinkDisplay.interface";
 
 const LinksData: LinksDataInterface[] = [
   {
