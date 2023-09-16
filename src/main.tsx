@@ -4,7 +4,7 @@ import App from './App.tsx'
 import { MantineProvider } from '@mantine/core'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <MantineProvider theme={{colorScheme:"dark"}}>
+    <MantineProvider theme={{colorScheme:"dark"}} withNormalizeCSS>
       <App />
     </MantineProvider>
   </React.StrictMode>,
