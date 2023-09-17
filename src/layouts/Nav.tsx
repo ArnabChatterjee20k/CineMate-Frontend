@@ -1,8 +1,8 @@
 import { createStyles, Header, Group, Burger, rem } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
 import Logo from "../components/Logo";
 import Search from "../components/Nav/Search";
 import ActionLinks from "../components/Nav/ActionLinks";
+import { useSideNavContext } from "../context/SideNavContext";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -21,7 +21,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function Nav() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const {opened,toggle} = useSideNavContext()
   const { classes } = useStyles();
 
   return (

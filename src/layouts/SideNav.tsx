@@ -1,15 +1,15 @@
 import { Drawer, Navbar } from "@mantine/core";
 import ActionLinks from "../components/SideNav/ActionLinks";
-import { useDisclosure } from "@mantine/hooks";
 import useIsMobile from "../hooks/useIsMobile";
+import { useSideNavContext } from "../context/SideNavContext";
 
 export default function SideNav() {
   const isMobile = useIsMobile();
-  const [opened, { close }] = useDisclosure(true);
+  const { opened, toggle } = useSideNavContext();
 
   if (isMobile)
     return (
-      <Drawer opened={opened} size="75%" onClose={close}>
+      <Drawer opened={opened} size="75%" onClose={toggle}>
         <ActionLinks />
       </Drawer>
     );
