@@ -12,12 +12,12 @@ function App() {
       <SideNavContextProvider>
         <AppShell
           styles={{
-            main: { backgroundColor: theme.colors.dark[6] },
+            main: { backgroundColor: theme.colors.dark[6],width:"70%" },
           }}
           header={<Nav />}
           navbar={<SideNav />}
         >
-          <Box sx={{padding:"1rem"}}>
+          <Box sx={{padding:"2rem"}}>
             <Home />
           </Box>
         </AppShell>

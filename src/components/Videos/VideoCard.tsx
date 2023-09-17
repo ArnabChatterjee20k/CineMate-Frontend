@@ -1,5 +1,14 @@
-import { Avatar, Card, Text, Image, Flex,useMantineTheme } from "@mantine/core";
+import {
+  Avatar,
+  Card,
+  Text,
+  Image,
+  Flex,
+  useMantineTheme,
+} from "@mantine/core";
 import VideoCardProps from "../../interfaces/VideoCard.interface";
+import useIsMobile from "../../hooks/useIsMobile";
+
 const width = 300;
 export default function VideoCard({
   title,
@@ -10,14 +19,24 @@ export default function VideoCard({
   videoURL,
   profilepicURL,
 }: VideoCardProps) {
-    const theme = useMantineTheme()
+  const isMobile = useIsMobile();
+  const theme = useMantineTheme();
   return (
-    <Card padding="xs" radius="md" withBorder sx={{cursor:"pointer", maxWidth: width,"&:hover":{
-        backgroundColor:theme.colors.dark[4],
-        boxShadow:theme.shadows.sm
-    } }}>
+    <Card
+      padding="xs"
+      radius="md"
+      withBorder
+      sx={{
+        cursor: "pointer",
+        maxWidth: isMobile ? "100%" : width,
+        "&:hover": {
+          backgroundColor: theme.colors.dark[4],
+          boxShadow: theme.shadows.sm,
+        },
+      }}
+    >
       <Card.Section>
-        <Image maw={width} mx="auto" src={thumbnail} alt="Random image" />
+        <Image mx="auto" src={thumbnail} alt="Random image" width="100%" />
       </Card.Section>
 
       <Flex align="flex-start" mt="md" gap={15}>

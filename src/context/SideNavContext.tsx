@@ -12,7 +12,7 @@ interface Props {
 }
 
 export default function SideNavContextProvider({ children }: Props) {
-  const [opened, { toggle }] = useDisclosure(true);
+  const [opened, { toggle }] = useDisclosure(false);
   return (
     <SideNavContext.Provider value={{ opened, toggle }}>
       {children}
