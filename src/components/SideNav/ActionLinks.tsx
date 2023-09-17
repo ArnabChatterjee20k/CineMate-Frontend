@@ -10,6 +10,7 @@ export default function ActionLinks() {
       {SideNavLinksData.map(({ Icon, label, link }) => {
         return (
           <NavLink
+          sx={{borderRadius:"10px"}}
             color="gray"
             component={Link}
             to={link}
