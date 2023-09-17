@@ -15,7 +15,7 @@ export default function SideNav() {
     );
   else
     return (
-      <Navbar fixed p="xs" width={{ base: 200 }}>
+      <Navbar p="xs" width={{ base: 200 }}>
         <Navbar.Section grow mt="md">
           <ActionLinks />
         </Navbar.Section>

@@ -3,6 +3,7 @@ import { Nav } from "./layouts/Nav";
 import { BrowserRouter } from "react-router-dom";
 import SideNav from "./layouts/SideNav";
 import SideNavContextProvider from "./context/SideNavContext";
+import Home from "./pages/Home";
 
 function App() {
   const theme = useMantineTheme();
@@ -10,19 +11,15 @@ function App() {
     <BrowserRouter>
       <SideNavContextProvider>
         <AppShell
-          styles={{ main: { padding: 0 } }}
+          styles={{
+            main: { backgroundColor: theme.colors.dark[6] },
+          }}
           header={<Nav />}
           navbar={<SideNav />}
         >
-          <Box
-            sx={{
-              margin: 0,
-              padding: 0,
-              backgroundColor: theme.colors.dark[8],
-              minHeight: "100vh",
-              width: "100%",
-            }}
-          ></Box>
+          <Box sx={{padding:"1rem"}}>
+            <Home />
+          </Box>
         </AppShell>
       </SideNavContextProvider>
     </BrowserRouter>

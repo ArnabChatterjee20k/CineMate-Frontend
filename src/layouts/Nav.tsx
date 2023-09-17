@@ -8,7 +8,6 @@ const useStyles = createStyles((theme) => ({
   header: {
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
-    opacity: 0.7,
     width: "100%",
   },
 
