@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import SideNav from "./layouts/SideNav";
 import SideNavContextProvider from "./context/SideNavContext";
 import Home from "./pages/Home";
+import UserRouter from "./components/routes/VideoRouter";
 
 function App() {
   const theme = useMantineTheme();
@@ -17,8 +18,8 @@ function App() {
           header={<Nav />}
           navbar={<SideNav />}
         >
-          <Box sx={{padding:"2rem"}}>
-            <Home />
+          <Box sx={{paddingBlock:"2rem"}}>
+            <UserRouter/>
           </Box>
         </AppShell>
       </SideNavContextProvider>
