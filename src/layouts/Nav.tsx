@@ -1,8 +1,17 @@
-import { createStyles, Header, Group, Burger, rem } from "@mantine/core";
+import {
+  createStyles,
+  Header,
+  Group,
+  Burger,
+  rem,
+  Avatar,
+  Box,
+} from "@mantine/core";
 import Logo from "../components/Logo";
 import Search from "../components/Nav/Search";
 import ActionLinks from "../components/Nav/ActionLinks";
 import { useSideNavContext } from "../context/SideNavContext";
+import { useAuthContext } from "../context/AuthContext";
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -20,7 +29,8 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function Nav() {
-  const {opened,toggle} = useSideNavContext()
+  const { opened, toggle } = useSideNavContext();
+  const { user, signIn, signOut } = useAuthContext();
   const { classes } = useStyles();
 
   return (
@@ -33,7 +43,10 @@ export function Nav() {
 
         <Search />
 
-        <ActionLinks />
+        <Box sx={{ display: "flex" }}>
+          <ActionLinks />
+          <Avatar component="button" size="1.5em" radius="lg" sx={{cursor:"pointer"}} onClick={user ? signOut : signIn} src={user?.photoURL} />
+        </Box>
       </div>
     </Header>
   );

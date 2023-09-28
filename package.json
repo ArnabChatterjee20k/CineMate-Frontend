@@ -14,8 +14,12 @@
     "@mantine/core": "^6.0.19",
     "@mantine/hooks": "^6.0.19",
     "@tabler/icons-react": "^2.32.0",
+    "firebase": "^10.4.0",
+    "firebaseui": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-firebaseui": "^6.0.0",
     "react-hls-player": "^3.0.7",
     "react-router-dom": "^6.16.0"
   },

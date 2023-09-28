@@ -23,6 +23,7 @@ export default function ActionLinks() {
     <Group sx={{ marginInline: 15 }}>
       <Link to="/search">
         <IconSearch
+          size="1.5em"
           color="white"
           className={`${classes.link} ${classes.search}`}
         />
@@ -30,7 +31,7 @@ export default function ActionLinks() {
       {LinksData.map(({ link, Icon }) => (
         <Link to={link}>
           <Icon
-            size="2rem"
+            size="1.5em"
             stroke={1.5}
             color="white"
             className={classes.link}
