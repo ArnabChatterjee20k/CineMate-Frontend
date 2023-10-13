@@ -1,4 +1,5 @@
 export default interface VideoCardProps {
+  id:string;
   title: string;
   views: string;
   timestamp: string;

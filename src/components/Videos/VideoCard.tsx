@@ -8,9 +8,11 @@ import {
 } from "@mantine/core";
 import VideoCardProps from "../../interfaces/VideoCard.interface";
 import useIsMobile from "../../hooks/useIsMobile";
+import { Link } from "react-router-dom";
 
 const width = 300;
 export default function VideoCard({
+  id,
   title,
   author,
   thumbnail,
@@ -23,6 +25,8 @@ export default function VideoCard({
   const theme = useMantineTheme();
   return (
     <Card
+      component={Link}
+      to={`/videos/${id}`}
       padding="xs"
       radius="md"
       withBorder

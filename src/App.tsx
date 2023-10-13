@@ -5,6 +5,7 @@ import SideNav from "./layouts/SideNav";
 import SideNavContextProvider from "./context/SideNavContext";
 import UserRouter from "./components/routes/UserRouter";
 import AuthContextProvider from "./context/AuthContext";
+import VideoRouter from "./components/routes/VideoRouter";
 
 function App() {
   const theme = useMantineTheme();
@@ -20,6 +21,7 @@ function App() {
             navbar={<SideNav />}
           >
             <Box sx={{ paddingBlock: "2rem" }}>
+              <VideoRouter />
               <UserRouter />
             </Box>
           </AppShell>
