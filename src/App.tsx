@@ -20,7 +20,7 @@ function App() {
             header={<Nav />}
             navbar={<SideNav />}
           >
-            <Box sx={{ paddingBlock: "2rem" }}>
+            <Box sx={{ paddingBlock: "2rem" , maxWidth:"1536px",marginInline:"auto"}}>
               <VideoRouter />
               <UserRouter />
             </Box>
