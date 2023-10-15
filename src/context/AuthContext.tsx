@@ -23,7 +23,9 @@ export default function AuthContextProvider({ children }: ChildrenProp) {
   const nav = useNavigate();
   async function signIn() {
     try {
-      await signInWithGoogle();
+      const credential = await signInWithGoogle();
+      const idToken = await credential?.user.getIdToken()
+      // do some actions
       nav("/");
     } catch (error) {
       alert("error");
