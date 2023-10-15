@@ -22,7 +22,7 @@ export default function VideoPlayer() {
       // currentLevel expect to receive an index of the levels array
       
       // playerRef.current.loadLevel(event.target.value)
-      playerRef.current.loadLevel = event.target.value
+      playerRef.current.currentLevel = event.target.value
     }
   };
 
